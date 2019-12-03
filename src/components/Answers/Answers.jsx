@@ -1,5 +1,4 @@
 import React from 'react';
-import css from './Answers.module.css'
 
 class Answers extends React.Component {
     constructor(props) {
