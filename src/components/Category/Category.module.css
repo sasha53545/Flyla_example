@@ -1,0 +1,22 @@
+.category {
+    grid-area: category;
+    background-color: darkgrey;
+}
+
+.title_of_list {
+    text-align: center;
+}
+
+li {
+    font-size: 12px;
+    letter-spacing: 1px;
+    list-style-type: none;
+}
+
+ul {
+    border: 2px solid black;
+    margin: 4%;
+    padding-left: 12%;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}

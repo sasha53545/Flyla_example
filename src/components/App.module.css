@@ -1,0 +1,19 @@
+.mainApp {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "logo category" "answers questions";
+}
+
+.logo {
+    grid-area: logo;
+    background-color: dimgray;
+
+}
+
+.logo h1 {
+  padding-left: 5%;
+  font-size: 300%;
+  text-decoration: underline;
+}

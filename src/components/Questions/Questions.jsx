@@ -1,31 +1,26 @@
 import React from 'react';
 import Category from "../Category/Category";
 import {BrowserRouter, Route} from "react-router-dom";
+import css from './Questions.module.css'
 
 
 class Questions extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            questions: []
-        }
-    }
 
-    componentDidMount() {
-        fetch(' https://opentdb.com/api.php?amount=10')
-            .then(response =>{
-                return response.json()
-            })
-            .then(questions => {
-                this.setState({questions: questions})
-            })
+        }
     }
 
     render() {
         return (
             <BrowserRouter>
-                <Route path='/Category' render={() => <Category/>}/>
-                {console.log(this.state)}
+                <div className={css.questions}>
+                    <div><h1 className={css.title_of_list}>Выберите вопрос:</h1></div>
+                </div>
+                <div>
+
+                </div>
             </BrowserRouter>
 
 

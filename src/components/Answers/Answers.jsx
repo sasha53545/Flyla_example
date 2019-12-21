@@ -1,4 +1,5 @@
 import React from 'react';
+import css from './Answers.module.css'
 
 class Answers extends React.Component {
     constructor(props) {
@@ -10,7 +11,8 @@ class Answers extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={css.answers}>
+                <div><h1 className={css.title_of_list}>Ответ на ваш вопрос:</h1></div>
 
             </div>
         );

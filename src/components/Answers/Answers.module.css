@@ -1,0 +1,8 @@
+.answers {
+    grid-area: answers;
+    background-color: darkgrey;
+}
+
+.title_of_list {
+    text-align: center;
+}
