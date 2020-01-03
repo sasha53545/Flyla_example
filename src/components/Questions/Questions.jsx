@@ -8,7 +8,23 @@ class Questions extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            questions: []
+        }
+    }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        const categoryIdWasChanged = this.props.indexName !== prevProps.indexName;
+
+        if (this.props.indexName && categoryIdWasChanged) {
+            fetch(`https://opentdb.com/api.php?amount=10&category=${this.props.indexName}`)
+                .then(question => {
+                    return question.json();
+                })
+                .then(question => {
+                    this.setState({
+                        questions: question.results
+                    })
+                })
         }
     }
 
@@ -17,13 +33,13 @@ class Questions extends React.Component {
             <BrowserRouter>
                 <div className={css.questions}>
                     <div><h1 className={css.title_of_list}>Выберите вопрос:</h1></div>
-                </div>
-                <div>
-
+                    <ul>
+                        {this.state.questions.map((item) => {
+                            return <li>{item.question}</li>
+                        })}
+                    </ul>
                 </div>
             </BrowserRouter>
-
-
         );
     }
 }

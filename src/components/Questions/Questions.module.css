@@ -1,8 +1,18 @@
 .questions {
     grid-area: questions;
-    background-color: dimgray;
 }
 
 .title_of_list {
     text-align: center;
+}
+
+ul {
+    border: 2px solid black;
+    margin: 4%;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+li {
+    list-style-type: decimal;
 }

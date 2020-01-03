@@ -11,8 +11,6 @@ function App() {
             <div className={css.mainApp}>
                 <div className={css.logo}><h1>Flyla</h1></div>
                 <Category/>
-                <Route path='/Questions' render={() => <Questions/>}/>
-                <Answers/>
             </div>
         </BrowserRouter>
     );

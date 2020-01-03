@@ -8,8 +8,6 @@
 
 .logo {
     grid-area: logo;
-    background-color: dimgray;
-
 }
 
 .logo h1 {
